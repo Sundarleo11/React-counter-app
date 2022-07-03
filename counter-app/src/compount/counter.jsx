@@ -13,8 +13,8 @@ class counter extends Component {
     }
 
     formatcount() {
-        const { count } = this.state;
-        return count === 0 ? 'zero' : count;
+        const { counter } = this.state;
+        return counter === 0 ? 'zero' : counter;
 
     }
 }
