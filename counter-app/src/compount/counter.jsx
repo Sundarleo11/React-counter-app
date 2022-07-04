@@ -12,6 +12,10 @@ class counter extends Component {
         fontSize: 10,
         fontWight: 'Bold'
     }
+
+    handleIncrement() {
+        console.log("Increment");
+    }
     render() {
 
         let classes = this.getBadgeMehod();
@@ -22,7 +26,7 @@ class counter extends Component {
             <div>
 
                 <span className={classes}>{this.formatcount()}</span>
-                <button className='btn btn-secondary btn-sm'>Increment</button>
+                <button onClick={this.handleIncrement} className='btn btn-secondary btn-sm'>Increment</button>
                 <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
             </div>
 
