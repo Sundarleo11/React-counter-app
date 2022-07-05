@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class counter extends Component {
 
     state = {
-        count: 0,
+        //count: 0,
+        count: this.props.value,
         tags: ["tag1", "tag2", "tag3"]
 
     };
@@ -28,6 +29,8 @@ class counter extends Component {
     }
 
     render() {
+
+        console.log("props", this.props);
 
         let classes = this.getBadgeMehod();
         return (
